@@ -27,12 +27,11 @@
   <body ng-app="starter">
 
     <ion-pane ng-controller="mainController">
-      <ion-header-bar class="bar-energized">
-        <button class="button button-assertive" ng-click="onClickRemove()">Deletar</button>
+      <ion-header-bar class="bar-assertive">
         <h1 class="title">Todo List</h1>
       </ion-header-bar>
 
-      <ion-footer-bar class="bar-energized">
+      <ion-footer-bar class="bar-assertive">
       <div class="row">
         <div class="col col-80">
           <strong>Exibir Finalizadas</strong>        
@@ -44,6 +43,14 @@
 
       </ion-footer-bar>
       <ion-content>
+      <div class="row">
+        <div class="col col-50">
+          <button class="button button-block button-assertive" ng-click="onClickRemove()">Deletar</button>
+        </div>
+         <div class="col col-50">
+          <button class="button button-block button-balanced" ng-click="onItemAdd()">Adicionar</button>
+        </div>
+      </div>
         <ion-list show-delete="removeStatus">
           <ion-item ng-repeat="item in lista track by $index" ng-hide="onHideItem(item)">
           <div class="row">
