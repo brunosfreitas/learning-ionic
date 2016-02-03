@@ -1,1 +1,1 @@
-# Learnig Ionic Framework
+# Learning Ionic Framework

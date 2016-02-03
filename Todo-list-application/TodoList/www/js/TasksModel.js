@@ -1,3 +1,3 @@
 function getTasks(){
-	this.items = ['Task 1', 'Task 2', 'Task 1'];
+	this.items = [{nome: 'Task 1', finalizada: false}, {nome: 'Task 2', finalizada: false}, {nome: 'Task 1', finalizada: false}];
 }
