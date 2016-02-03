@@ -25,11 +25,7 @@ app.run(function($ionicPlatform) {
 
 
 app.controller('mainController', function($scope){
-  $scope.menssage = "";
+ var tasks = new getTasks();
 
-  $scope.lista = ['A', 'B', 'C', 'D', 'E'];
-
-  $scope.newMenssage = function(novaMensagem){
-    $scope.menssage = novaMensagem;
-  };
+ $scope.lista = tasks.items;
 });
