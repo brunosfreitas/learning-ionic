@@ -28,13 +28,13 @@
 
     <ion-pane ng-controller="mainController">
       <ion-header-bar class="bar bar-header bar-assertive">
-        <h1 class="title">Todo List</h1>
+        <h1 class="title">Easy Todo List</h1>
       </ion-header-bar>
 
       <ion-footer-bar class="bar-assertive">
       <div class="row row-center">
         <div class="col col-80">
-          <strong>Exibir Finalizadas</strong>        
+          <strong>Ocultar Finalizadas</strong>        
         </div>
         <div class="col col-20">
           <label class="toggle"><input type="checkbox" ng-model="showMarked"><div class="track"><div class="handle"></div></div></label>
@@ -52,10 +52,10 @@
         </div>
       </div>
         <ion-list show-delete="removeStatus">
-          <ion-item ng-repeat="item in lista track by $index" ng-hide="onHideItem(item)">
+          <ion-item ng-repeat="item in lista  | orderBy:'finalizada' track by $index" ng-hide="onShowItem(item)">
           <div class="row">
             <div class="col col-90">
-              {{item.nome}}
+              <p class="{{item.finalizada ? 'tarefa-finalizada' : ''}}">{{item.nome}}</p>
               <ion-delete-button class="ion-minus-circled" ng-click="onItemRemove(item)"></ion-delete-button>
               <ion-option-button class="button-positive" ng-click="onItemEdit(item)">Editar</ion-option-button>
             </div>

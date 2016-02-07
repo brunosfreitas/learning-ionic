@@ -61,8 +61,8 @@ app.controller('mainController', function($scope, $ionicPopup, $ionicListDelegat
   tasks.save();
  };
 
- $scope.onHideItem = function(item){
-  return item.finalizada && !$scope.showMarked
+ $scope.onShowItem = function(item){
+  return item.finalizada && $scope.showMarked
  };
 
  $scope.onItemAdd = function(){
